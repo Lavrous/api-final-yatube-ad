@@ -51,5 +51,8 @@ class Comment(models.Model):
 
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['user', 'following'], name='unique_follow')
+            models.UniqueConstraint(
+                fields=['user', 'following'],
+                name='unique_follow'
+            )
         ]
